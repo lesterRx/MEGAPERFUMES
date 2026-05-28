@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MEGAFRAGANCIAS</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="LOGO.jpeg" alt="logo">
+      <h2>MEGAFRAGANCIAS</h2>
+    </div>
+
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#top">MAS VENDIDOS</a>
+      <a href="#recomendados">RECOMENDADOS</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="inicio">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>FRAGANCIAS QUE DEJAN HUELLA</h1>
+      <p>Perfumes exclusivos para hombre, mujer y niños ✨</p>
+      <div class="hero-buttons">
+
+        <!--CATALOGO -->
+
+        <a href="catalogo.html" target="_blank" class="btn-gold">
+          Ver Catálogo
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAS VENDIDOS -->
+
+  <section class="productos-section" id="top">
+    <h2>🔥 Más Vendidos 🔥</h2>
+    <div class="productos">
+      <div class="card">
+        <img id="img1">
+        <div class="contenido">
+        <h3>Sauvage</h3>
+        <p>La fragancia masculina más vendida.</p>
+        
+        <select class="selector" id="tamano1">
+          <option value="30ML">30ML</option>
+          <option value="50ML">50ML</option>
+          <option value="100ML">100ML</option>
+        </select>
+        <button onclick="pedirPerfume('Sauvage','tamano1')">Pedir Perfume</button>
+        </select>
+        </div>
+      </div>
+
+      <div class="card">
+        <img id="img2">
+        <div class="contenido">
+          <h3>Good Girl</h3>
+          <p>Elegancia femenina y sensualidad.</p>
+            <select class="selector" id="tamano2">
+              <option value="30ML">30ML</option>
+              <option value="50ML">50ML</option>
+              <option value="100ML">100ML</option>
+            </select>
+            <button onclick="pedirPerfume('Good Girl','tamano2')">Pedir Perfume</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img id="img3">
+        <div class="contenido">
+          <h3>Versace Eros</h3>
+          <p>Lujo y seducción en cada aroma.</p>
+            <select class="selector" id="tamano3">
+                <option value="30ML">30ML</option>
+                <option value="50ML">50ML</option>
+                <option value="100ML">100ML</option>
+            </select>
+            <button onclick="pedirPerfume('Versace Eros','tamano3')">Pedir Perfume</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- RECOMENDADOS -->
+
+  <section class="productos-section" id="recomendados">
+
+    <h2>⭐ Recomendados ⭐</h2>
+
+    <div class="productos">
+      <div class="card">
+        <img id="img4">
+        <div class="contenido">
+          <h3>Yara</h3>
+          <p>Fragancia dulce y moderna.</p>
+          <select class="selector" id="tamano4">
+                <option value="30ML">30ML</option>
+                <option value="50ML">50ML</option>
+                <option value="100ML">100ML</option>
+            </select>
+            <button onclick="pedirPerfume('Yara','tamano4')">Pedir Perfume</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img id="img5">
+        <div class="contenido">
+          <h3>ONE MILLION LUCKY</h3>
+          <p>Intenso, elegante y exclusivo.</p>
+          <select class="selector" id="tamano5">
+                <option value="30ML">30ML</option>
+                <option value="50ML">50ML</option>
+                <option value="100ML">100ML</option>
+            </select>
+            <button onclick="pedirPerfume('One Million','tamano5')">Pedir Perfume</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img id="img6">
+        <div class="contenido">
+          <h3>Miss Dior</h3>
+          <p>Perfume floral delicado.</p>
+          <select class="selector" id="tamano6">
+                <option value="30ML">30ML</option>
+                <option value="50ML">50ML</option>
+                <option value="100ML">100ML</option>
+            </select>
+            <button onclick="pedirPerfume('Miss Dior','tamano6')">Pedir Perfume</button>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <img src="LOGO.jpeg" alt="logo">
+    <h3>MEGAFRAGANCIAS</h3>
+    <p>Pedidos: 3018494322</p>
+    <p>© 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- SCRIPT -->
+
+  <script>
+
+    function pedirPerfume(nombre, selectorId){
+
+      let tamano =
+      document.getElementById(selectorId).value;
+
+      let mensaje =
+      `Hola, quiero comprar, me interesa ${nombre} de ${tamano}`;
+
+      let url =
+      `https://wa.me/573018494322?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, "_blank");
+
+    }
+
+  </script>
+
+</body>
+</html>
