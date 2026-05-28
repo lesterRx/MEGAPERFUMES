@@ -1,0 +1,52 @@
+body{
+  margin:0;
+  background:#050505;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding:50px;
+}
+
+h1{
+  color:#d4af37;
+  margin-bottom:40px;
+}
+
+.catalogos{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#111;
+  padding:30px;
+  border-radius:20px;
+  width:300px;
+  border:1px solid #d4af37;
+}
+
+.card h2{
+  color:#d4af37;
+}
+
+.card p{
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#d4af37;
+  color:black;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+}
